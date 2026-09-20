@@ -11,4 +11,4 @@ Modifications in this project include changes to the container base environment 
 
 This project is maintained by Bobcat Robotics and is not an official LinuxServer.io project.
 
-LinuxServer.io is not responsible for, and does not provide support for, the modifications or container images published by Bobcat Robotics.
+For support and information regarding the original project, please refer to the upstream LinuxServer.io repository. Bobcat Robotics is responsible for the modifications and container images distributed from this repository.

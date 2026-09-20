@@ -80,7 +80,7 @@ To help you get started creating a container from this image you can either use 
 ---
 services:
   vscodium-web:
-    image: lscr.io/linuxserver/vscodium-web:latest
+    image: docker.io/bobcatrobotics/vscodium-web:latest
     container_name: vscodium-web
     environment:
       - PUID=1000
@@ -114,7 +114,7 @@ docker run -d \
   -p 8000:8000 \
   -v /path/to/vscodium-web/config:/config \
   --restart unless-stopped \
-  lscr.io/linuxserver/vscodium-web:latest
+  docker.io/bobcatrobotics/vscodium-web:latest
 ```
 
 ## Parameters
@@ -198,7 +198,7 @@ We publish various [Docker Mods](https://github.com/linuxserver/docker-mods) to 
 * Image version number:
 
     ```bash
-    docker inspect -f '{{ index .Config.Labels "build_version" }}' lscr.io/linuxserver/vscodium-web:latest
+    docker inspect -f '{{ index .Config.Labels "build_version" }}' docker.io/bobcatrobotics/vscodium-web:latest
     ```
 
 ## Updating Info
@@ -246,7 +246,7 @@ Below are the instructions for updating containers:
 * Update the image:
 
     ```bash
-    docker pull lscr.io/linuxserver/vscodium-web:latest
+    docker pull docker.io/bobcatrobotics/vscodium-web:latest
     ```
 
 * Stop the running container:
@@ -278,12 +278,12 @@ Below are the instructions for updating containers:
 If you want to make local modifications to these images for development purposes or just to customize the logic:
 
 ```bash
-git clone https://github.com/linuxserver/docker-vscodium-web.git
+git clone https://github.com/bobcatrobotics/docker-vscodium-web.git
 cd docker-vscodium-web
 docker build \
   --no-cache \
   --pull \
-  -t lscr.io/linuxserver/vscodium-web:latest .
+  -t docker.io/bobcatrobotics/vscodium-web:latest .
 ```
 
 The ARM variants can be built on x86_64 hardware and vice versa using `lscr.io/linuxserver/qemu-static`

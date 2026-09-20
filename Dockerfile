@@ -6,8 +6,8 @@ FROM ghcr.io/linuxserver/baseimage-ubuntu:resolute
 ARG BUILD_DATE
 ARG VERSION
 ARG CODE_RELEASE
-LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="aptalca"
+LABEL build_version="docker.io/bobcatrobotics version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="Bobcat Robotics"
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -34,7 +34,7 @@ RUN \
   tar xf \
     /tmp/vscodium-web.tar.gz -C \
     /app/vscodium-web/ --strip-components=1 && \
-  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
+  printf "docker.io/bobcatrobotics version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** clean up ****" && \
   apt-get clean && \
   rm -rf \
